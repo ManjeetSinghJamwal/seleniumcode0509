@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.logging.FileHandler;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -79,5 +80,23 @@ sc.deselectAll();
 sc.getAllSelectedOptions();
 sc.getOptions();
 sc.getFirstSelectedOption();
+//frame
+driver.switchTo().frame(0);
+driver.switchTo().frame("");
+driver.switchTo().frame(element);
+driver.switchTo().parentFrame();
+driver.switchTo().defaultContent();
+//navigate
+driver.getCurrentUrl();
+driver.getTitle();
+driver.navigate().to("");
+driver.navigate().refresh();
+driver.navigate().back();
+//Alert
+Alert alert=driver.switchTo().alert();
+alert.accept();
+alert.dismiss();
+
+
 	}
 }
