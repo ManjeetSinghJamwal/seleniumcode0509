@@ -1,0 +1,18 @@
+<suite name="testsuit">
+	<listeners>
+		<!--<listener class-name="day0909.MyListener" />-->
+		<listener class-name="day0909.ExtentReportManager" />
+	</listeners>
+	<test thread-count="5" name="test1">
+
+		<classes>
+
+			<class name="day0909.OrangeHRM" />
+
+		</classes>
+
+
+	</test>
+
+
+</suite>
