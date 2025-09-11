@@ -1,4 +1,4 @@
-package selenium;
+package day0909;
 
 import java.awt.RenderingHints.Key;
 import java.io.File;
@@ -55,7 +55,7 @@ public class SeleniumMethods {
 		Files.copy(src, dest);
 		System.out.println("screenshot successfull");
 		driver.quit();
-// Actionmethods
+// Action methods
 		Actions obj = new Actions(driver);
 // mouse hover
 		obj.moveToElement(driver.findElement(By.id("")));
@@ -68,35 +68,34 @@ public class SeleniumMethods {
 //keyboard action
 		obj.keyDown(Keys.CONTROL).sendKeys("").keyUp(Keys.CONTROL).perform();
 //SelectMethod
-		WebElement dropDown=driver.findElement(By.name("i"));
-Select sc=new Select(dropDown);
-sc.selectByContainsVisibleText("");
-sc.selectByIndex(0);
-sc.selectByValue("");
-sc.deselectByIndex(0);
-sc.deSelectByContainsVisibleText("");
-sc.deselectByValue("");
-sc.deselectAll();
-sc.getAllSelectedOptions();
-sc.getOptions();
-sc.getFirstSelectedOption();
+		WebElement dropDown = driver.findElement(By.name("i"));
+		Select sc = new Select(dropDown);
+		sc.selectByContainsVisibleText("");
+		sc.selectByIndex(0);
+		sc.selectByValue("");
+		sc.deselectByIndex(0);
+		sc.deSelectByContainsVisibleText("");
+		sc.deselectByValue("");
+		sc.deselectAll();
+		sc.getAllSelectedOptions();
+		sc.getOptions();
+		sc.getFirstSelectedOption();
 //frame
-driver.switchTo().frame(0);
-driver.switchTo().frame("");
-driver.switchTo().frame(element);
-driver.switchTo().parentFrame();
-driver.switchTo().defaultContent();
+		driver.switchTo().frame(0);
+		driver.switchTo().frame("");
+		driver.switchTo().frame(element);
+		driver.switchTo().parentFrame();
+		driver.switchTo().defaultContent();
 //navigate
-driver.getCurrentUrl();
-driver.getTitle();
-driver.navigate().to("");
-driver.navigate().refresh();
-driver.navigate().back();
+		driver.getCurrentUrl();
+		driver.getTitle();
+		driver.navigate().to("");
+		driver.navigate().refresh();
+		driver.navigate().back();
 //Alert
-Alert alert=driver.switchTo().alert();
-alert.accept();
-alert.dismiss();
-
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		alert.dismiss();
 
 	}
 }
